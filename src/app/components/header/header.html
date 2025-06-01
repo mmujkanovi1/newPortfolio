@@ -1,0 +1,50 @@
+<nav class="header-container">
+  <div class="container mx-auto px-4">
+    <div class="header-content">
+      <!-- Logo -->
+      <div class="logo-container">
+        <a href="#" class="logo">
+          <span class="logo-text">M</span>
+          <span class="logo-full">Mirza Portfolio</span>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="nav-links hidden md:flex">
+        <a (click)="onNavClick('home')" class="nav-link" [class.active]="isActive('home')">
+          <span class="nav-text">Home</span>
+        </a>
+        <a (click)="onNavClick('about')" class="nav-link" [class.active]="isActive('about')">
+          <span class="nav-text">About</span>
+        </a>
+        <a (click)="onNavClick('projects')" class="nav-link" [class.active]="isActive('projects')">
+          <span class="nav-text">Projects</span>
+        </a>
+        <a (click)="onNavClick('education')" class="nav-link" [class.active]="isActive('education')">
+          <span class="nav-text">Education</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button (click)="toggleMobileMenu()" class="mobile-menu-btn md:hidden">
+        <div class="hamburger" [class.active]="isMobileMenuOpen">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" [class.active]="isMobileMenuOpen">
+      <a (click)="onNavClick('home'); toggleMobileMenu()" 
+         class="mobile-link" [class.active]="isActive('home')">Home</a>
+      <a (click)="onNavClick('about'); toggleMobileMenu()" 
+         class="mobile-link" [class.active]="isActive('about')">About</a>
+      <a (click)="onNavClick('projects'); toggleMobileMenu()" 
+         class="mobile-link" [class.active]="isActive('projects')">Projects</a>
+      <a (click)="onNavClick('education'); toggleMobileMenu()" 
+         class="mobile-link" [class.active]="isActive('education')">Education</a>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,133 @@
+.footer {
+  width: 100%;
+  background: linear-gradient(to bottom, #f8fafc, #f1f5f9);
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.3;
+    pointer-events: none;
+    mix-blend-mode: soft-light;
+  }
+}
+
+.footer-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem 2rem;
+}
+
+.main-footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-section {
+  h3 {
+    color: #1a365d;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -0.5rem;
+      left: 0;
+      width: 2rem;
+      height: 2px;
+      background: linear-gradient(135deg, #1a365d 0%, #2563eb 100%);
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 0.75rem;
+
+      a, span {
+        color: #475569;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        font-size: 0.95rem;
+
+        &:hover {
+          color: #2563eb;
+        }
+      }
+    }
+  }
+}
+
+.bottom-footer {
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+  padding-top: 2rem;
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  p {
+    color: #64748b;
+    font-size: 0.875rem;
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    a {
+      color: #64748b;
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #2563eb;
+      }
+    }
+
+    .separator {
+      color: #cbd5e1;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    padding: 3rem 1.5rem 1.5rem;
+  }
+
+  .main-footer {
+    gap: 2rem;
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+
+    .footer-links {
+      justify-content: center;
+    }
+  }
+}

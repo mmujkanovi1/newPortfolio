@@ -1,0 +1,26 @@
+<div class="min-h-screen 
+w-full">
+  <app-header (sectionChange)="scrollToSection($event)"></app-header>
+
+  <!-- Main Content -->
+  <main class="flex-grow w-full">
+    <section id="home" class="w-full min-h-screen">
+      <app-home></app-home>
+    </section>
+
+    <section id="about" class="w-full min-h-screen">
+      <app-about></app-about>
+    </section>
+
+    <section id="projects" class="w-full min-h-screen">
+      <app-projects></app-projects>
+    </section>
+
+    <section id="education" class="w-full min-h-screen">
+      <app-education></app-education>
+    </section>
+  </main>
+
+  <app-footer></app-footer>
+  <app-back-to-top></app-back-to-top>
+</div>
