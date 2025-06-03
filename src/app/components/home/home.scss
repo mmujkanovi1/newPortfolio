@@ -106,6 +106,19 @@
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  
+  @include tablet {
+    font-size: 4rem;
+  }
+}
+
+.title-is {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  color: #fff;
   
   @include tablet {
     font-size: 4rem;
@@ -116,7 +129,12 @@
   background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: block;
+  white-space: nowrap;
+  font-size: 3.8rem;
+  
+  @include tablet {
+    font-size: 4.2rem;
+  }
 }
 
 .subtitle {
@@ -124,6 +142,8 @@
   color: #94a3b8;
   margin-bottom: 2rem;
   line-height: 1.6;
+  max-width: 540px;
+  margin-top: 2rem;
 }
 
 .cta-group {
