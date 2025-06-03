@@ -4,12 +4,14 @@ import { HomeComponent } from './components/home/home';
 import { AboutComponent } from './components/about/about';
 import { ProjectsComponent } from './components/projects/projects';
 import { EducationComponent } from './components/education/education';
+import { SkillsComponent } from './components/skills/skills';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'education', component: EducationComponent },
+  { path: 'skills', component: SkillsComponent },
   { path: '**', redirectTo: '' }
 ];
 

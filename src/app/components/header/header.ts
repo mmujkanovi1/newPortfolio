@@ -63,7 +63,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   };
 
   private checkVisibleSection() {
-    const sections = ['home', 'about', 'projects', 'education'];
+    const sections = ['home', 'about', 'projects', 'education', 'skills'];
     let maxVisibility = 0;
     let mostVisibleSection = this.activeSection;
 
@@ -123,7 +123,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     }, options);
 
     setTimeout(() => {
-      ['home', 'about', 'projects', 'education'].forEach(sectionId => {
+      ['home', 'about', 'projects', 'education', 'skills'].forEach(sectionId => {
         const element = document.getElementById(sectionId);
         if (element && this.observer) {
           this.observer.observe(element);

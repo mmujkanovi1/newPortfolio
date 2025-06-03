@@ -12,6 +12,7 @@ import { HeaderComponent } from './components/header/header';
 import { FooterComponent } from './components/footer/footer';
 import { BackToTopComponent } from './ui-components/back-to-top/back-to-top';
 import { ChatBotComponent } from './ui-components/chat-bot/chat-bot';
+import { SkillsComponent } from './components/skills/skills';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ChatBotComponent } from './ui-components/chat-bot/chat-bot';
     HeaderComponent,
     FooterComponent,
     BackToTopComponent,
-    ChatBotComponent
+    ChatBotComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,23 +1,19 @@
-import { Component, OnInit, AfterViewInit, PLATFORM_ID, Inject } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  standalone: false,
   templateUrl: './home.html',
   styleUrls: ['./home.scss']
 })
 export class HomeComponent implements OnInit, AfterViewInit {
   private hasAnimated = new Set<Element>();
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor() {}
 
   ngOnInit() {}
 
   ngAfterViewInit() {
-    if (isPlatformBrowser(this.platformId)) {
-      this.initCounters();
-    }
+    this.initCounters();
   }
 
   private initCounters() {
@@ -29,9 +25,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
       
       const target = parseInt(counter.getAttribute('data-count') || '0', 10);
       let current = 0;
-      const duration = 1000; // 1 second total duration
-      const steps = 20; // Fewer steps for faster counting
+      const duration = 2000; // 2 seconds
+      const steps = 60; // Smooth animation with 60 steps
       const stepDuration = duration / steps;
+      
+      // Easing function for smooth animation
+      const easeOutQuart = (t: number): number => 1 - Math.pow(1 - t, 4);
       
       const updateCounter = (step: number) => {
         if (step > steps) {
@@ -40,8 +39,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
           return;
         }
         
-        // Linear progression instead of easing
-        current = Math.floor((step / steps) * target);
+        const progress = step / steps;
+        const easedProgress = easeOutQuart(progress);
+        current = Math.floor(easedProgress * target);
         
         counter.textContent = current.toString();
         counter.classList.add('counting');
@@ -49,9 +49,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
         setTimeout(() => updateCounter(step + 1), stepDuration);
       };
       
-      // Start the animation immediately
+      // Start the animation
       counter.textContent = '0';
-      updateCounter(1);
+      setTimeout(() => updateCounter(1), 100);
     };
 
     const observerCallback: IntersectionObserverCallback = (entries) => {
@@ -72,4 +72,4 @@ export class HomeComponent implements OnInit, AfterViewInit {
       observer.observe(counter);
     });
   }
-}
+} 

@@ -1,0 +1,76 @@
+// Color Variables
+$primary-dark: #35141A;
+$primary-red: #A4030C;
+$accent-red: #E81735;
+$purple-text: #82749D;
+$accent-blue: #A0AEF7;
+$background-light: #FDFDFE;
+$background-gradient: #F8F9FF;
+$text-gray: #666;
+$border-color: #eee;
+
+// Typography
+$font-size-base: 1rem;
+$font-size-lg: 1.25rem;
+$font-size-xl: 1.5rem;
+$font-size-2xl: 2rem;
+$font-size-3xl: 3.5rem;
+
+// Spacing
+$spacing-base: 1rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+$spacing-2xl: 4rem;
+
+// Breakpoints
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1200px;
+
+// Border Radius
+$border-radius-sm: 5px;
+$border-radius-md: 15px;
+$border-radius-lg: 20px;
+
+// Transitions
+$transition-base: 0.3s ease;
+
+// Shadows
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+// Colors
+$primary-color: #00c6ff;
+$secondary-color: #0072ff;
+$dark-bg: #1a1a1a;
+$darker-bg: #2d2d2d;
+$text-light: #a0a0a0;
+$text-dark: #333333;
+
+// Gradients
+$primary-gradient: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+$dark-gradient: linear-gradient(135deg, $dark-bg 0%, $darker-bg 100%);
+
+// Breakpoints
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+$large-desktop: 1200px;
+
+// Spacing
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 2rem;
+$spacing-lg: 4rem;
+$spacing-xl: 6rem;
+
+// Border radius
+$border-radius-sm: 8px;
+$border-radius-md: 15px;
+$border-radius-lg: 20px;
+
+// Transitions
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease; 
