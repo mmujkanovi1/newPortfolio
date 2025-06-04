@@ -21,24 +21,12 @@
   color: #3b82f6;
 }
 
-section {
-  scroll-margin-top: 5rem;
-  transition: all 0.3s ease;
-  width: 100%;
-  min-height: 100vh;
-}
-
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
+// Main background for the entire app
 main {
   width: 100%;
-  min-height: 100%;
-  box-sizing: border-box;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #fff;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -47,6 +35,31 @@ main {
   > * {
     width: 100%;
   }
+}
+
+section {
+  scroll-margin-top: 5rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes floatOrb {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(30px, -30px);
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 nav {

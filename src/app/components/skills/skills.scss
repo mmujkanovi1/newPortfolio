@@ -3,12 +3,11 @@
 .skills-page {
     min-height: 100vh;
     padding: $spacing-2xl $spacing-lg;
-    background: linear-gradient(135deg, $background-light 0%, $background-gradient 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    overflow: hidden;
+    z-index: 1;
 }
 
 .noise-overlay {
@@ -30,15 +29,16 @@
     z-index: 1;
     max-width: $breakpoint-xl;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.05);
     padding: $spacing-2xl;
     border-radius: $border-radius-lg;
-    box-shadow: $shadow-md;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 
     h2 {
         font-size: $font-size-2xl;
-        color: $primary-dark;
+        color: #fff;
         margin-bottom: $spacing-2xl;
         text-align: center;
         position: relative;
@@ -51,7 +51,7 @@
             transform: translateX(-50%);
             width: 60px;
             height: 3px;
-            background: linear-gradient(135deg, $primary-dark 0%, $accent-blue 100%);
+            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
             border-radius: 3px;
         }
     }
@@ -68,23 +68,24 @@
         .skill-category {
             text-align: left;
             padding: $spacing-lg;
-            background: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.05);
             border-radius: $border-radius-md;
             transition: transform $transition-base, box-shadow $transition-base;
-            box-shadow: $shadow-sm;
-            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
 
             &:hover {
                 transform: translateY(-5px);
-                box-shadow: $shadow-md;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+                background: rgba(255, 255, 255, 0.08);
             }
 
             h3 {
                 font-size: $font-size-lg;
-                color: $primary-dark;
+                color: #fff;
                 margin-bottom: $spacing-base;
                 padding-bottom: $spacing-base * 0.5;
-                border-bottom: 2px solid $accent-blue;
+                border-bottom: 2px solid #3b82f6;
             }
 
             ul {
@@ -94,18 +95,18 @@
 
                 li {
                     padding: $spacing-base * 0.5;
-                    color: $purple-text;
+                    color: #94a3b8;
                     font-size: $font-size-base;
                     display: flex;
                     align-items: center;
                     
                     &:not(:last-child) {
-                        border-bottom: 1px solid $border-color;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
                     }
 
                     &::before {
                         content: '•';
-                        color: $accent-blue;
+                        color: #60a5fa;
                         margin-right: $spacing-base * 0.5;
                         font-size: 1.2em;
                     }
