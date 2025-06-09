@@ -1,6 +1,6 @@
 import { NgModule, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing-module';
 import { AppComponent } from './app';
@@ -13,6 +13,7 @@ import { FooterComponent } from './components/footer/footer';
 import { BackToTopComponent } from './ui-components/back-to-top/back-to-top';
 import { ChatBotComponent } from './ui-components/chat-bot/chat-bot';
 import { SkillsComponent } from './components/skills/skills';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +26,14 @@ import { SkillsComponent } from './components/skills/skills';
     FooterComponent,
     BackToTopComponent,
     ChatBotComponent,
-    SkillsComponent
+    SkillsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),

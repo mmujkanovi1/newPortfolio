@@ -32,8 +32,23 @@ main {
   flex-direction: column;
   align-items: stretch;
 
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent 50%),
+                radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.05), transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
   > * {
     width: 100%;
+    position: relative;
+    z-index: 2;
   }
 }
 
@@ -109,7 +124,9 @@ nav a {
 ::ng-deep app-home,
 ::ng-deep app-about,
 ::ng-deep app-projects,
-::ng-deep app-education {
+::ng-deep app-education,
+::ng-deep app-skills,
+::ng-deep app-contact {
   display: block;
   width: 100%;
   min-height: 100vh;

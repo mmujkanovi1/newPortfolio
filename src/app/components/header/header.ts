@@ -123,7 +123,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     }, options);
 
     setTimeout(() => {
-      ['home', 'about', 'projects', 'education', 'skills'].forEach(sectionId => {
+      ['home', 'about', 'projects', 'education', 'skills', 'contact'].forEach(sectionId => {
         const element = document.getElementById(sectionId);
         if (element && this.observer) {
           this.observer.observe(element);
