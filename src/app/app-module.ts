@@ -14,6 +14,7 @@ import { BackToTopComponent } from './ui-components/back-to-top/back-to-top';
 import { ChatBotComponent } from './ui-components/chat-bot/chat-bot';
 import { SkillsComponent } from './components/skills/skills';
 import { ContactComponent } from './components/contact/contact.component';
+import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ContactComponent } from './components/contact/contact.component';
     BackToTopComponent,
     ChatBotComponent,
     SkillsComponent,
-    ContactComponent
+    ContactComponent,
+    TestimonialsComponent
   ],
   imports: [
     BrowserModule,
