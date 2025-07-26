@@ -12,6 +12,11 @@
         color: white;
         font-weight: 600;
         position: relative;
+        background: $section-title-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
         
         &::after {
             content: '';
