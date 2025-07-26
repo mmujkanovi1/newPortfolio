@@ -40,6 +40,30 @@ export class ProjectsComponent {
       techStack: ['Vue.js', 'Express', 'PostgreSQL'],
       githubLink: 'https://github.com/yourusername/ecommerce',
       demoLink: 'https://ecommerce-demo.com'
+    },
+    {
+      title: 'E-commerce Platform',
+      description: 'A modern e-commerce platform with features like product catalog, shopping cart, payment integration, and order management system.',
+      image: 'assets/images/ecommerce.png',
+      techStack: ['Vue.js', 'Express', 'PostgreSQL'],
+      githubLink: 'https://github.com/yourusername/ecommerce',
+      demoLink: 'https://ecommerce-demo.com'
+    },
+    {
+      title: 'E-commerce Platform',
+      description: 'A modern e-commerce platform with features like product catalog, shopping cart, payment integration, and order management system.',
+      image: 'assets/images/ecommerce.png',
+      techStack: ['Vue.js', 'Express', 'PostgreSQL'],
+      githubLink: 'https://github.com/yourusername/ecommerce',
+      demoLink: 'https://ecommerce-demo.com'
+    },
+    {
+      title: 'E-commerce Platform',
+      description: 'A modern e-commerce platform with features like product catalog, shopping cart, payment integration, and order management system.',
+      image: 'assets/images/ecommerce.png',
+      techStack: ['Vue.js', 'Express', 'PostgreSQL'],
+      githubLink: 'https://github.com/yourusername/ecommerce',
+      demoLink: 'https://ecommerce-demo.com'
     }
   ];
 }
