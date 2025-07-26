@@ -26,8 +26,8 @@ export class ProjectsComponent {
       demoLink: 'https://yourportfolio.com'
     },
     {
-      title: 'Task Management Application',
-      description: 'A full-stack task management application with real-time updates, user authentication, and collaborative features. Implements drag-and-drop functionality and data persistence.',
+      title: 'Taskboard Application',
+      description: ' As Austria’s first full-service financial provider, Wüstenrot offers comprehensive solutions for savings, financing, retirement planning, and insurance. The project features numerous web services that communicate with each other, while the frontend is implemented using a microfrontend architecture.',
       image: 'assets/images/task-manager.png',
       techStack: ['React', 'Node.js', 'MongoDB'],
       githubLink: 'https://github.com/yourusername/task-manager',
