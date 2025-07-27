@@ -1,0 +1,126 @@
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-header">
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="section-subtitle">Have a project in mind? Let's create something amazing together.</p>
+    </div>
+    
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="info-item">
+          <div class="info-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="info-content">
+            <h3>Location</h3>
+            <p>Sarajevo</p>
+            <p>Bosnia and Herzegovina</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="info-content">
+            <h3>Email</h3>
+            <p>mirza.mujkanovic&#64;gmail.com</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="info-content">
+            <h3>Phone</h3>
+            <p>+387 61 663 310</p>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/mirza-mujkanovic" target="_blank" class="social-link" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/mirzamujkanovic" target="_blank" class="social-link" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://facebook.com/mirza.mujkanovic" target="_blank" class="social-link" title="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com/mirzamujkanovic" target="_blank" class="social-link" title="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input 
+              id="name"
+              type="text" 
+              formControlName="name" 
+              placeholder="Enter your name"
+              [ngClass]="{'invalid': submitted && contactForm.get('name')?.errors}"
+            >
+            <div class="error-message" *ngIf="submitted && contactForm.get('name')?.errors?.['required']">
+              Name is required
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input 
+              id="email"
+              type="email" 
+              formControlName="email" 
+              placeholder="Enter your email"
+              [ngClass]="{'invalid': submitted && contactForm.get('email')?.errors}"
+            >
+            <div class="error-message" *ngIf="submitted && contactForm.get('email')?.errors?.['required']">
+              Email is required
+            </div>
+            <div class="error-message" *ngIf="submitted && contactForm.get('email')?.errors?.['email']">
+              Please enter a valid email
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input 
+            id="subject"
+            type="text" 
+            formControlName="subject" 
+            placeholder="What's this about?"
+            [ngClass]="{'invalid': submitted && contactForm.get('subject')?.errors}"
+          >
+          <div class="error-message" *ngIf="submitted && contactForm.get('subject')?.errors?.['required']">
+            Subject is required
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea 
+            id="message"
+            formControlName="message" 
+            rows="5"
+            placeholder="Tell me about your project..."
+            [ngClass]="{'invalid': submitted && contactForm.get('message')?.errors}"
+          ></textarea>
+          <div class="error-message" *ngIf="submitted && contactForm.get('message')?.errors?.['required']">
+            Message is required
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          <span>Send Message</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</section> 

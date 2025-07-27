@@ -1,0 +1,14 @@
+<div class="skills-page">
+  <div class="noise-overlay"></div>
+  <div class="skills-container">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-category" *ngFor="let skillGroup of skills">
+        <h3>{{skillGroup.category}}</h3>
+        <ul>
+          <li *ngFor="let skill of skillGroup.items">{{skill}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div> 

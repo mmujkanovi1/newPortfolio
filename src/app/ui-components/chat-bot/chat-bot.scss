@@ -1,0 +1,152 @@
+.chat-bot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.chat-toggle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #2196f3;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &.open {
+    background: #f44336;
+  }
+
+  .close-icon {
+    font-size: 24px;
+  }
+}
+
+.chat-window {
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  width: 350px;
+  height: 500px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chat-header {
+  padding: 15px;
+  background: #2196f3;
+  color: white;
+  
+  h3 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+  }
+}
+
+.message {
+  max-width: 80%;
+  padding: 10px 15px;
+  border-radius: 15px;
+  position: relative;
+  
+  &.user-message {
+    align-self: flex-end;
+    background: #2196f3;
+    color: white;
+    border-bottom-right-radius: 5px;
+  }
+  
+  &.bot-message {
+    align-self: flex-start;
+    background: #f1f1f1;
+    color: #333;
+    border-bottom-left-radius: 5px;
+  }
+
+  .message-content {
+    margin-bottom: 5px;
+  }
+
+  .message-time {
+    font-size: 0.7rem;
+    opacity: 0.7;
+  }
+}
+
+.chat-input {
+  padding: 15px;
+  background: #f8f9fa;
+  display: flex;
+  gap: 10px;
+  border-top: 1px solid #eee;
+
+  input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    font-size: 0.9rem;
+
+    &:focus {
+      border-color: #2196f3;
+    }
+  }
+
+  button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: #2196f3;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background: #1976d2;
+    }
+  }
+} 

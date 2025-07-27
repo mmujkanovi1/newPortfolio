@@ -14,14 +14,20 @@
         <a (click)="onNavClick('home')" class="nav-link" [class.active]="isActive('home')">
           <span class="nav-text">Home</span>
         </a>
-        <a (click)="onNavClick('about')" class="nav-link" [class.active]="isActive('about')">
-          <span class="nav-text">About</span>
+        <a (click)="onNavClick('skills')" class="nav-link" [class.active]="isActive('skills')">
+          <span class="nav-text">Skills</span>
+        </a>
+        <a (click)="onNavClick('education')" class="nav-link" [class.active]="isActive('education')">
+          <span class="nav-text">Education</span>
         </a>
         <a (click)="onNavClick('projects')" class="nav-link" [class.active]="isActive('projects')">
           <span class="nav-text">Projects</span>
         </a>
-        <a (click)="onNavClick('education')" class="nav-link" [class.active]="isActive('education')">
-          <span class="nav-text">Education</span>
+        <a (click)="onNavClick('testimonials')" class="nav-link" [class.active]="isActive('testimonials')">
+          <span class="nav-text">Testimonials</span>
+        </a>
+        <a (click)="onNavClick('contact')" class="nav-link" [class.active]="isActive('contact')">
+          <span class="nav-text">Contact</span>
         </a>
       </div>
 
@@ -36,15 +42,13 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu" [class.active]="isMobileMenuOpen">
-      <a (click)="onNavClick('home'); toggleMobileMenu()" 
-         class="mobile-link" [class.active]="isActive('home')">Home</a>
-      <a (click)="onNavClick('about'); toggleMobileMenu()" 
-         class="mobile-link" [class.active]="isActive('about')">About</a>
-      <a (click)="onNavClick('projects'); toggleMobileMenu()" 
-         class="mobile-link" [class.active]="isActive('projects')">Projects</a>
-      <a (click)="onNavClick('education'); toggleMobileMenu()" 
-         class="mobile-link" [class.active]="isActive('education')">Education</a>
+    <div class="mobile-menu md:hidden" [class.active]="isMobileMenuOpen">
+      <a (click)="onNavClick('home')" class="mobile-nav-link" [class.active]="isActive('home')">Home</a>
+      <a (click)="onNavClick('skills')" class="mobile-nav-link" [class.active]="isActive('skills')">Skills</a>
+      <a (click)="onNavClick('education')" class="mobile-nav-link" [class.active]="isActive('education')">Education</a>
+      <a (click)="onNavClick('projects')" class="mobile-nav-link" [class.active]="isActive('projects')">Projects</a>
+      <a (click)="onNavClick('testimonials')" class="mobile-nav-link" [class.active]="isActive('testimonials')">Testimonials</a>
+      <a (click)="onNavClick('contact')" class="mobile-nav-link" [class.active]="isActive('contact')">Contact</a>
     </div>
   </div>
 </nav>

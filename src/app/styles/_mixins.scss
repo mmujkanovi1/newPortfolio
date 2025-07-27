@@ -1,0 +1,65 @@
+// Responsive breakpoints
+@mixin mobile {
+  @media (max-width: #{$tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) and (max-width: #{$desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+// Flexbox helpers
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Glass effect
+@mixin glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+// Text gradient
+@mixin text-gradient($gradient) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// Hover transition
+@mixin hover-lift {
+  transition: transform $transition-normal;
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+// Card shadow
+@mixin card-shadow {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  transition: box-shadow $transition-normal;
+  
+  &:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  }
+} 
