@@ -13,13 +13,22 @@ interface Testimonial {
 export class TestimonialsComponent {
   testimonials: Testimonial[] = [
     {
-      content: 'Working with Mirza was an exceptional experience. His technical expertise and problem-solving abilities are outstanding. He consistently delivered high-quality solutions and was a valuable team member.'
+      content: 'I am happy with Mirya and his work done. He is motivated and tries to solve occuring problems.'
     },
     {
-      content: 'Mirza demonstrated excellent leadership and technical skills during our project collaboration. His ability to understand complex requirements and translate them into elegant solutions was impressive.'
+      content: 'He presents himself professionally, with a respectfull friendly attitude, making him a great team player.'
     },
     {
-      content: 'I had the pleasure of working with Mirza on several critical projects. His dedication to quality and attention to detail made him stand out. He\'s not just a developer, but a true problem solver.'
+      content: 'Hi is nice to talk him about anything'
+    },
+    {
+      content: 'Asks for help when needed'
+    },
+    {
+      content: 'Dilligent, immediately solves issues'
+    },
+    {
+      content: 'Strong technical understanding and proacting attitude'
     }
   ];
 
