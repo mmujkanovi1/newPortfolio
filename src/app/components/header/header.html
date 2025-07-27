@@ -1,4 +1,4 @@
-<nav class="header-container">
+<nav class="header-container" [class.scrolled]="scrolled">
   <div class="container mx-auto px-4">
     <div class="header-content">
       <!-- Logo -->
@@ -43,12 +43,12 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu md:hidden" [class.active]="isMobileMenuOpen">
-      <a (click)="onNavClick('home')" class="mobile-nav-link" [class.active]="isActive('home')">Home</a>
-      <a (click)="onNavClick('skills')" class="mobile-nav-link" [class.active]="isActive('skills')">Skills</a>
-      <a (click)="onNavClick('education')" class="mobile-nav-link" [class.active]="isActive('education')">Education</a>
-      <a (click)="onNavClick('projects')" class="mobile-nav-link" [class.active]="isActive('projects')">Projects</a>
-      <a (click)="onNavClick('testimonials')" class="mobile-nav-link" [class.active]="isActive('testimonials')">Testimonials</a>
-      <a (click)="onNavClick('contact')" class="mobile-nav-link" [class.active]="isActive('contact')">Contact</a>
+      <a (click)="onNavClick('home')" class="mobile-link" [class.active]="isActive('home')">Home</a>
+      <a (click)="onNavClick('skills')" class="mobile-link" [class.active]="isActive('skills')">Skills</a>
+      <a (click)="onNavClick('education')" class="mobile-link" [class.active]="isActive('education')">Education</a>
+      <a (click)="onNavClick('projects')" class="mobile-link" [class.active]="isActive('projects')">Projects</a>
+      <a (click)="onNavClick('testimonials')" class="mobile-link" [class.active]="isActive('testimonials')">Testimonials</a>
+      <a (click)="onNavClick('contact')" class="mobile-link" [class.active]="isActive('contact')">Contact</a>
     </div>
   </div>
 </nav>
