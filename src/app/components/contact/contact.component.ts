@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import emailjs from 'emailjs-com';
+
 
 @Component({
   selector: 'app-contact',
@@ -22,12 +24,21 @@ export class ContactComponent {
 
   onSubmit() {
     this.submitted = true;
+
     if (this.contactForm.valid) {
-      // Here you would typically handle the form submission
-      console.log(this.contactForm.value);
-      // Reset form after successful submission
-      this.contactForm.reset();
-      this.submitted = false;
+      const serviceID = 'service_dn62x3h';
+      const templateID = 'template_vsxq6pp';
+      const userID = 'Fty6c-ENJZXPuJMO0';
+
+      emailjs.send(serviceID, templateID, this.contactForm.value, userID)
+        .then(() => {
+          alert('Email sent successfully!');
+          this.contactForm.reset();
+          this.submitted = false;
+        }, (err) => {
+          console.error('Failed to send email:', err);
+          alert('Failed to send email. Please try again later.');
+        });
     }
   }
-} 
+}
