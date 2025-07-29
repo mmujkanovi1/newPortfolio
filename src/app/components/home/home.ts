@@ -1,5 +1,7 @@
 import { Component, OnInit, AfterViewInit, PLATFORM_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { Title, Meta } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-home',

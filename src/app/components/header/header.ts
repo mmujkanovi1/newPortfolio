@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   private isBrowser: boolean;
   private isScrolling = false;
   private scrollTimeout: any = null;
+  scrolled = false;
 
   constructor(
     @Inject(PLATFORM_ID) platformId: Object,
@@ -50,16 +51,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   private handleScroll = () => {
-    if (this.scrollTimeout) {
-      clearTimeout(this.scrollTimeout);
-    }
-
-    this.isScrolling = true;
-
-    this.scrollTimeout = setTimeout(() => {
-      this.isScrolling = false;
+    const scrollY = window.scrollY || window.pageYOffset;
+    this.ngZone.run(() => {
+      this.scrolled = scrollY > 1;
       this.checkVisibleSection();
-    }, 50);
+    });
   };
 
   private checkVisibleSection() {
