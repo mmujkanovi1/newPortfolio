@@ -7,6 +7,8 @@ interface Project {
   techStack: string[];
   githubLink: string;
   demoLink: string;
+  disabledGithubLink: boolean;
+  disabledDemoLink: boolean;
 }
 
 @Component({
@@ -22,24 +24,30 @@ export class ProjectsComponent {
       description: 'A modern portfolio website built using Angular 17 with a focus on responsive design and smooth animations. Features include dark mode, interactive components, and optimized performance.',
       image: 'assets/portfolio.png',
       techStack: ['Angular', 'TypeScript', 'SCSS'],
-      githubLink: 'https://github.com/yourusername/portfolio',
-      demoLink: 'https://yourportfolio.com'
+      githubLink: 'https://github.com/mmujkanovi1/newPortfolio',
+      demoLink: window.location.origin,
+      disabledGithubLink: false,
+      disabledDemoLink: false
     },
     {
       title: 'Taskboard Application',
       description: ' As Austria’s first full-service financial provider, Wüstenrot offers comprehensive solutions for savings, financing, retirement planning, and insurance. The project features numerous web services that communicate with each other, while the frontend is implemented using a microfrontend architecture.',
       image: 'assets/wustenrot.png',
-      techStack: ['Java', 'Angular', 'Bamboo', 'Hexagon' ],
+      techStack: ['Java', 'Angular', 'Bamboo', 'Hexagon'],
       githubLink: 'https://github.com/yourusername/task-manager',
-      demoLink: 'https://task-manager-demo.com'
+      demoLink: 'https://task-manager-demo.com',
+      disabledGithubLink: true,
+      disabledDemoLink: true
     },
     {
       title: 'E-commerce Platform',
       description: 'A modern e-commerce platform with features like product catalog, shopping cart, payment integration, and order management system.',
       image: 'assets/reddotfood.png',
-      techStack: ['React', 'Java', 'Spring boot', 'PostgreSQL', 'AWS' ],
+      techStack: ['React', 'Java', 'Spring boot', 'PostgreSQL', 'AWS'],
       githubLink: 'https://github.com/yourusername/ecommerce',
-      demoLink: 'https://www.reddotfood.store/'
+      demoLink: 'https://www.reddotfood.store/',
+      disabledGithubLink: true,
+      disabledDemoLink: false
     },
     {
       title: 'Infobiro',
@@ -47,7 +55,9 @@ export class ProjectsComponent {
       image: 'assets/infobiro.png',
       techStack: ['Html', 'Css', 'Scala'],
       githubLink: 'https://github.com/yourusername/ecommerce',
-      demoLink: 'https://www.infobiro.ba/'
+      demoLink: 'https://www.infobiro.ba/',
+      disabledGithubLink: true,
+      disabledDemoLink: false
     },
     {
       title: 'Advertisment app - INTERN',
@@ -55,7 +65,9 @@ export class ProjectsComponent {
       image: 'assets/advertisment.jpg',
       techStack: ['Java', 'Spring boot', 'PostgreSQL'],
       githubLink: 'https://github.com/mmujkanovi1/Market-spring',
-      demoLink: 'https://ecommerce-demo.com'
+      demoLink: 'https://ecommerce-demo.com',
+      disabledGithubLink: false,
+      disabledDemoLink: true
     },
     {
       title: 'Scandinavian airline system',
@@ -63,7 +75,9 @@ export class ProjectsComponent {
       image: 'assets/sas.png',
       techStack: ['java', 'Spring boot', 'Oracle'],
       githubLink: 'https://github.com/yourusername/ecommerce',
-      demoLink: 'https://www.flysas.com/en'
+      demoLink: 'https://www.flysas.com/en',
+      disabledGithubLink: true,
+      disabledDemoLink: true
     },
     {
       title: 'Factoring',
@@ -71,7 +85,9 @@ export class ProjectsComponent {
       image: 'assets/factoring.png',
       techStack: ['Java', 'Spring boot', 'Oracle', 'Angular'],
       githubLink: 'https://github.com/yourusername/ecommerce',
-      demoLink: 'https://www.flysas.com/en'
+      demoLink: 'https://www.flysas.com/en',
+      disabledGithubLink: true,
+      disabledDemoLink: true
     }
   ];
 }
