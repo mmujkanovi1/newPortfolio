@@ -14,7 +14,7 @@ export class SkillsComponent implements OnInit {
     },
     {
       category: 'Backend',
-      items: ['Node.js', '.NET Core', 'Python', 'SQL', 'RESTful APIs', 'GraphQL']
+      items: ['Java', 'Spring boot', 'PostgresSQL', 'SQL', 'RESTful APIs', 'Hexagonal']
     },
     {
       category: 'Tools & Others',
