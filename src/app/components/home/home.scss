@@ -39,9 +39,12 @@
 }
 
 @keyframes floatOrb {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(0, 0);
   }
+
   50% {
     transform: translate(30px, -30px);
   }
@@ -68,7 +71,7 @@
   min-height: calc(100vh - 80px);
   position: relative;
   padding: 2rem 0;
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -86,11 +89,17 @@
   align-items: center;
   gap: 4rem;
   margin-bottom: 6rem;
-  
+
   @include mobile {
     flex-direction: column;
     gap: 2rem;
     margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-flex {
+    display: contents!important;
   }
 }
 
@@ -107,7 +116,7 @@
   margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
-  
+
   @include tablet {
     font-size: 4rem;
   }
@@ -118,7 +127,7 @@
   font-weight: 700;
   margin: 0.5rem 0;
   color: #fff;
-  
+
   @include tablet {
     font-size: 4rem;
   }
@@ -130,7 +139,7 @@
   -webkit-text-fill-color: transparent;
   white-space: nowrap;
   font-size: 3.8rem;
-  
+
   @include tablet {
     font-size: 4.2rem;
   }
@@ -151,12 +160,13 @@
   margin-bottom: 3rem;
 }
 
-.primary-btn, .secondary-btn {
+.primary-btn,
+.secondary-btn {
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   font-weight: 600;
   transition: all 0.3s ease;
-  
+
   &:hover {
     transform: translateY(-2px);
   }
@@ -166,7 +176,7 @@
   background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
   color: white;
   border: none;
-  
+
   &:hover {
     box-shadow: 0 8px 20px rgba(96, 165, 250, 0.3);
   }
@@ -176,7 +186,7 @@
   border: 2px solid #60a5fa;
   color: #60a5fa;
   background: transparent;
-  
+
   &:hover {
     background: rgba(96, 165, 250, 0.1);
   }
@@ -194,7 +204,7 @@
   gap: 2rem;
   margin: 0 auto;
   max-width: 1000px;
-  
+
   @include mobile {
     flex-direction: column;
     align-items: center;
@@ -214,7 +224,7 @@
   justify-content: space-between;
   align-items: center;
   transition: all 0.3s ease;
-  
+
   &:hover {
     transform: translateY(-5px);
     background: rgba(255, 255, 255, 0.08);
@@ -227,7 +237,7 @@
     align-items: baseline;
     margin-bottom: 0.5rem;
   }
-  
+
   .stat-number {
     font-size: 2.5rem;
     font-weight: 700;
@@ -235,14 +245,14 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  
+
   .stat-plus {
     font-size: 1.5rem;
     font-weight: 700;
     color: #60a5fa;
     margin-left: 2px;
   }
-  
+
   .stat-label {
     color: #94a3b8;
     font-size: 1rem;
@@ -257,7 +267,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   i {
     font-size: 1.5rem;
     color: #60a5fa;
@@ -268,7 +278,7 @@
 .hero-image {
   flex: 1;
   position: relative;
-  
+
   .profile-image {
     width: 100%;
     max-width: 400px;
@@ -277,7 +287,7 @@
     z-index: 2;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   }
-  
+
   .image-shape {
     position: absolute;
     top: -20px;
@@ -295,39 +305,6 @@
     margin-left: 0;
   }
 }
-
-.floating-card {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  z-index: 3;
-  
-  i {
-    color: #60a5fa;
-  }
-  
-  span {
-    color: white;
-    font-weight: 500;
-  }
-  
-  &.card-1 {
-    top: 20%;
-    left: -60px;
-  }
-  
-  &.card-2 {
-    bottom: 20%;
-    right: -60px;
-  }
-}
-
 // Services Section
 .services-section {
   padding: 6rem 0;
@@ -357,12 +334,12 @@
   padding: 2rem;
   text-align: center;
   transition: all 0.3s ease;
-  
+
   &:hover {
     transform: translateY(-5px);
     background: rgba(255, 255, 255, 0.08);
   }
-  
+
   .service-icon {
     width: 64px;
     height: 64px;
@@ -372,23 +349,22 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem;
-    
+
     i {
       font-size: 2rem;
       color: #60a5fa;
     }
   }
-  
+
   h3 {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
     color: white;
   }
-  
+
   p {
     color: #94a3b8;
     line-height: 1.6;
   }
 }
-
